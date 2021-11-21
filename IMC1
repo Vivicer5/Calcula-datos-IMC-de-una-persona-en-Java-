@@ -1,0 +1,25 @@
+public class Persona {
+ public String nombre;
+ public int edad;
+ public  char genero;
+ public int peso;
+ public double altura;
+
+    Persona(String nombre,int edad, char genero,int peso,double altura){
+    this.nombre= nombre;
+    this.edad = edad;
+    this.genero = genero;
+    this.peso=peso;
+    this.altura = altura;
+}
+   public void calcularIMC(){
+    double IMC;
+    IMC = peso/Math.pow(altura, 2);
+    System.out.println("el IMC es"+ IMC);
+}
+    public static void main(String[] args) {
+        Persona p1 =new Persona("Maria",30,'F',60,1.60);
+        System.out.println(p1.nombre);
+
+        p1.calcularIMC();
+    }
